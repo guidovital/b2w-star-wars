@@ -1,0 +1,163 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Star-Wars",
+		"_postman_id": "2a61fc44-772a-a4fb-d014-99faca293747",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreatePlanet",
+			"request": {
+				"url": "http://localhost:8088/planets/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\" : \"aldebaran\",\n\t\"clima\": \"quente\",\n\t\"terreno\": \"plano\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "findById",
+			"request": {
+				"url": "http://localhost:8088/planets/2",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\" : \"Guido\",\n\t\"clima\": \"quente\",\n\t\"terreno\": \"plano\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "findAll",
+			"request": {
+				"url": "http://localhost:8088/planets/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\" : \"Guido\",\n\t\"clima\": \"quente\",\n\t\"terreno\": \"plano\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "findByName",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8088/planets/findByName?nome=hoth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"planets",
+						"findByName"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "hoth",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\" : \"Guido\",\n\t\"clima\": \"quente\",\n\t\"terreno\": \"plano\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deletePlanet",
+			"request": {
+				"url": "http://localhost:8088/planets/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "SWAPI",
+			"request": {
+				"url": {
+					"raw": "https://swapi.co/api/planets/?page=1",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"planets",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
